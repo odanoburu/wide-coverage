@@ -17,6 +17,7 @@ TranslateGer: TranslateGer.pgf
 TranslateHin: TranslateHin.pgf
 TranslateIta: TranslateIta.pgf
 TranslateJpn: TranslateJpn.pgf
+TranslatePor: TranslatePor.pgf
 TranslateRus: TranslateRus.pgf
 TranslateSpa: TranslateSpa.pgf
 TranslateSwe: TranslateSwe.pgf
@@ -87,6 +88,7 @@ TranslateCat.pgf:: ; $(GFMKT) -name=TranslateCat translator/TranslateCat.gf +RTS
 TranslateEst.pgf:: ; $(GFMKT) -name=TranslateEst translator/TranslateEst.gf +RTS -K64M
 TranslateTha.pgf:: ; $(GFMKT) -name=TranslateTha translator/TranslateTha.gf +RTS -K64M
 TranslateJpn.pgf:: ; $(GFMKT) -name=TranslateJpn translator/TranslateJpn.gf +RTS -K64M
+TranslatePor.pdf:: ; $(GFMKT) -name=TranslatePor translator/TranslatePor.gf +RTS -K64M
 TranslateRus.pgf:: ; $(GFMKT) -name=TranslateRus translator/TranslateRus.gf 
 TranslateUrd.pgf:: ; $(GFMKT) -name=TranslateUrd translator/TranslateUrd.gf 
 
@@ -97,6 +99,7 @@ TranslateEngFin: ; $(GFMKT) -name=TranslateEngFin TranslateEng.pgf TranslateFin.
 TranslateEngGer: ; $(GFMKT) -name=TranslateEngGer TranslateEng.pgf TranslateGer.pgf
 TranslateEngHin: ; $(GFMKT) -name=TranslateEngHin TranslateEng.pgf TranslateHin.pgf
 TranslateEngFre: ; $(GFMKT) -name=TranslateEngFre TranslateEng.pgf TranslateFre.pgf
+TranslateEngPor: ; $(GFMKT) -name=TranslateEngPor TranslateEng.pgf TranslatePor.pgf
 TranslateEngSpa: ; $(GFMKT) -name=TranslateEngSpa TranslateEng.pgf TranslateSpa.pgf
 TranslateEngSwe: ; $(GFMKT) -name=TranslateEngSwe TranslateEng.pgf TranslateSwe.pgf
 
