@@ -9,7 +9,7 @@ lin
   Det_Chunk det =  lin Utt {
     s = case det.n of {
        R.Sg => det.s ;
-       R.Pl => det.sp ! R.NCase R.Nom
+       R.Pl => det.sp ! R.Neutr ! True ! R.NCase R.Nom
        }
     } ;
 
@@ -42,6 +42,5 @@ lin
   perfect_neg_Chunk = ss "hasn't" | ss "haven't" ;
   past_perfect_Chunk = ss "had" ;
   past_perfect_neg_Chunk = ss "hadn't" ;
-  
 
-}
+} ;

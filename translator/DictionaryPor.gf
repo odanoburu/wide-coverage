@@ -1,5 +1,6 @@
 concrete DictionaryPor of Dictionary = CatPor ** open ConstructionPor, DictPor, GrammarPor, ParadigmsPor, Prelude, (L = LexiconPor), (S = SyntaxPor), (E = ExtraPor) in {
 
+  -- built using script in github.com/odanoburu/widecoverage, branch add-por
 flags
   coding=utf8 ;
 
@@ -9920,7 +9921,7 @@ lin flocculent_A = lanoso_A ; --*
 lin floe_N = icebergue_N ; --*
 lin flogging_N = flagelação_N ; --*
 lin flog_V = mkV "flagelar" ;  --*
-lin flooding_N = mkN "inundações" ;  --*
+lin flooding_N = variants {mkN "inundação" ; mkN "alagamento"} ;
 lin flood_N = variants {cheia_N ;enchente_N ;} ;  --*
 lin floodplain_N = mkN "Planície de inundação" ;  --*
 lin flood_V = mkV "inundar" ;  --*

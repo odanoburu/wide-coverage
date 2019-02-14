@@ -1,7 +1,7 @@
 --# -path=.:../chunk
 
 concrete TranslateEng of Translate = 
-  TenseX - [Pol, PNeg, PPos, SC],
+  TenseX - [CAdv, Pol, PNeg, PPos, SC],
   CatEng,
   NounEng - [
     PPartNP
@@ -38,7 +38,7 @@ concrete TranslateEng of Translate =
     ,RelSlash  -- replaced by RelSlash | PiedPipingRelSlash
     ],
   IdiomEng,
-  ConstructionEng,
+  ConstructionEng - [at_Prep],
   DocumentationEng,
 
   ChunkEng,
@@ -96,7 +96,7 @@ lin
 
   DetNP d = G.DetNP d | G.DetCN d (UseN (mkN "one")) ; -- I like this / I like this one ; it / the one
 
-  OrdNumeralSuperl n a = G.OrdNumeralSuperl n a | {s = \\c => n.s ! NOrd ! Nom ++ Predef.BIND ++ "-" ++ Predef.BIND ++ a.s ! AAdj Superl c} ;
+  OrdNumeralSuperl n a = G.OrdNumeralSuperl n a | {s = \\c => n.s ! True ! NOrd ! Nom ++ Predef.BIND ++ "-" ++ Predef.BIND ++ a.s ! AAdj Superl c} ;
 
   PossNP cn np = G.PossNP cn np |  {s = \\n,c => np.s ! npGen ++ cn.s ! n ! c  ; g = cn.g} ; ---- in the latter, no other determiners can be added
 

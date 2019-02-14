@@ -73,7 +73,7 @@ lin
 
    WithoutVP vp = {s = "without" ++ (GerundAdv (lin VP vp)).s} ; 
 
-   InOrderToVP vp = {s = ("in order" | []) ++ infVP VVInf vp Simul CPos (AgP3Sg Neutr)} ;
+   InOrderToVP vp = {s = ("in order" | []) ++ infVP VVInf vp False Simul CPos (AgP3Sg Neutr)} ;
 
    ByVP vp = {s = "by" ++ (GerundAdv (lin VP vp)).s} ; 
 
@@ -93,11 +93,11 @@ lin
   UseQuantPN q pn = {s = \\c => q.s ! False ! Sg ++ pn.s ! npcase2case c ; a = agrgP3 Sg pn.g} ;
 
   SlashV2V v ant p vp = insertObjc (\\a => v.c3 ++ ant.s ++ p.s ++
-                                           infVP v.typ vp ant.a p.p a)
+                                           infVP v.typ vp False ant.a p.p a)
                                    (predVc v) ;
 
   SlashSlashV2V v ant p vp = insertObjc (\\a => v.c3 ++ ant.s ++ p.s ++
-                                           infVP v.typ vp ant.a p.p a)
+                                           infVP v.typ vp False ant.a p.p a)
                                    (predVc v) ;
 
   SlashVPIV2V v p vpi = insertObjc (\\a => p.s ++ 
@@ -105,7 +105,7 @@ lin
                                            vpi.s ! VVAux ! a)
                                    (predVc v) ;
   ComplVV v a p vp = insertObj (\\agr => a.s ++ p.s ++ 
-                                         infVP v.typ vp a.a p.p agr)
+                                         infVP v.typ vp False a.a p.p agr)
                                (predVV v) ;
 
   PredFrontVS t np vs s = 
@@ -125,10 +125,10 @@ lin
   CompS s = {s = \\_ => "that" ++ s.s} ;
   CompQS qs = {s = \\_ => qs.s ! QIndir} ;
   CompVP ant p vp = {s = \\a => ant.s ++ p.s ++ 
-                                infVP VVInf vp ant.a p.p a} ;
+                                infVP VVInf vp True ant.a p.p a} ;
 
   VPSlashVS vs vp = 
-    insertObj (\\a => infVP VVInf vp Simul CPos a) (predV vs) **
+    insertObj (\\a => infVP VVInf vp False Simul CPos a) (predV vs) **
     {c2 = ""; gapInMiddle = False ; missingAdv = True} ; ---- missingAdv?
 
   PastPartRS ant pol vps = {

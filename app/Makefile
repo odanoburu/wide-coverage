@@ -65,6 +65,7 @@ AppFre.pgf:: ; $(GFMKT) -name=AppFre AppFre.gf +RTS -K64M
 AppIta.pgf:: ; $(GFMKT) -name=AppIta AppIta.gf +RTS -K64M
 AppJpn.pgf:: ; $(GFMKT) -name=AppJpn AppJpn.gf +RTS -K64M
 AppRus.pgf:: ; $(GFMKT) -name=AppRus AppRus.gf +RTS -K64M
+AppPor.pgf:: ; $(GFMKT) -name=AppPor AppPor.gf +RTS -K64M
 AppSpa.pgf:: ; $(GFMKT) -name=AppSpa AppSpa.gf +RTS -K64M
 AppSwe.pgf:: ; $(GFMKT) -name=AppSwe AppSwe.gf
 AppTha.pgf:: ; $(GFMKT) -name=AppTha AppTha.gf

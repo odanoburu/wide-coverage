@@ -1,4 +1,4 @@
-concrete DictionaryEng of Dictionary = CatEng ** open MorphoEng, ResEng, ParadigmsEng, IrregEng, (E = ExtraEng), (S = SyntaxEng), Prelude in {
+concrete DictionaryEng of Dictionary = CatEng ** open MorphoEng, ResEng, ParadigmsEng, IrregEng, (C = ConstructionEng), (E = ExtraEng), (S = SyntaxEng), Prelude in {
 
 flags
   coding=utf8 ;
@@ -3882,7 +3882,7 @@ lin asynergic_A = mkA "asynergic" ;
 lin asynergy_N = variants {mkN "asynergy"; mkN "asynergia"};
 lin asystole_N = mkN "asystole" ;
 lin at_N = mkN "at" ;
-lin at_Prep = mkPrep "at";
+lin at_Prep = C.at_Prep ;
 lin at_all_Adv = mkAdv "at all";
 lin at_home_Adv = mkAdv "at home" ;
 lin at_home_N = variants {mkN "at-home" "at-homes"; mkN "at home" "at homes"};
